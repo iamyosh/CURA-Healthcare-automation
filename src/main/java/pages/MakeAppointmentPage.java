@@ -1,5 +1,7 @@
 package pages;
 
+import org.openqa.selenium.WebDriver;
+
 public class MakeAppointmentPage {
     private WebDriver driver;
 
