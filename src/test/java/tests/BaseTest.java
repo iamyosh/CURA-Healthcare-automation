@@ -19,7 +19,7 @@ public class BaseTest {
 
 
         //click make appointment button
-
+        makeAppointmentPage = homePage.clickAppointmentButton();
     }
 
 
