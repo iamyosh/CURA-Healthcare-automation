@@ -19,6 +19,7 @@ public class HomePage {
     }
 
     public MakeAppointmentPage clickAppointmentButton(){
-
+        wait.until(ExpectedConditions.elementToBeClickable(appointmentLink)).click();
+        return new MakeAppointmentPage(driver);
     }
 }
