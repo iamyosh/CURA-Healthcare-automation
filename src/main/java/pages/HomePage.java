@@ -10,6 +10,8 @@ public class HomePage {
     private WebDriver driver;
     private WebDriverWait wait;
 
+    private By appointmentLink = By.id("btn-make-appointment");
+
     public HomePage(WebDriver driver){
         this.driver = driver;
 
