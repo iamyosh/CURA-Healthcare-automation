@@ -20,8 +20,8 @@ public class HomePage {
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
-    public MakeAppointmentPage clickAppointmentButton(){
+    public AppointmentLoginPage clickAppointmentButton(){
         wait.until(ExpectedConditions.elementToBeClickable(appointmentLink)).click();
-        return new MakeAppointmentPage(driver);
+        return new AppointmentLoginPage(driver);
     }
 }

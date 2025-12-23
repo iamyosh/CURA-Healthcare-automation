@@ -4,13 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
 import pages.HomePage;
-import pages.MakeAppointmentPage;
+import pages.AppointmentLoginPage;
 
 public class BaseTest {
 
     protected WebDriver driver;
     protected HomePage homePage;
-    protected MakeAppointmentPage makeAppointmentPage;
+    protected AppointmentLoginPage appointmentLoginPage;
 
     @BeforeClass
     public void setDriver(){
@@ -21,7 +21,7 @@ public class BaseTest {
 
 
         //click make appointment button
-        makeAppointmentPage = homePage.clickAppointmentButton();
+        appointmentLoginPage = homePage.clickAppointmentButton();
     }
 
 
