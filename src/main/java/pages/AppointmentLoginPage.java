@@ -14,11 +14,8 @@ public class AppointmentLoginPage {
     }
 
     //LOGIN TO MAKE APPOINTMENT
-    public void setUsername(String username){
+    public void setUserDetails(String username, String password){
         driver.findElement(usernameField).sendKeys(username);
-    }
-
-    public void setPassword(String password){
         driver.findElement(passwordField).sendKeys(password);
     }
 
