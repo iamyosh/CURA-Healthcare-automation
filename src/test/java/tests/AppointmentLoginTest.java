@@ -11,6 +11,7 @@ public class AppointmentLoginTest extends BaseTest{
     public void successfulLogin(){
         AppointmentLoginPage appointmentLoginPage = new AppointmentLoginPage(driver);
         appointmentLoginPage.setUserDetails("John Doe", "ThisIsNotAPassword");
+
         MakeAppointmentPage makeAppointmentPage = appointmentLoginPage.clickLoginButton();
     }
 }
