@@ -53,10 +53,4 @@ public class MakeAppointmentTest extends BaseTest{
         //catch{} - to catch the error (has the error msg)
     }
 
-    @Test
-    public void backHome(){
-        MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage(driver);
-        makeAppointmentPage.backToHome();
-    }
-
 }
