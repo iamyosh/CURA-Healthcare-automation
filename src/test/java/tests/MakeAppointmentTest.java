@@ -58,5 +58,5 @@ public class MakeAppointmentTest extends BaseTest{
         MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage(driver);
         makeAppointmentPage.backToHome();
     }
-    
+
 }
