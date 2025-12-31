@@ -37,15 +37,19 @@ public class MakeAppointmentTest extends BaseTest{
     }
 
     @AfterMethod
-    public void takeScreenshot(){
-        var camera = (TakesScreenshot) driver;
+    public void takeScreenshot(){       //camera is the variable name
+        var camera = (TakesScreenshot) driver;  //'TakeScreenshot' is an interface tht hv ss support
         File screenshot = camera.getScreenshotAs(OutputType.FILE);
         System.out.println("Screenshot of booked appointment taken in path: " + screenshot.getAbsolutePath());
 
-        try {
-            Files.move(screenshot.toPath(), new File("resources/screenshots/appointment.png").toPath());
+        //getScreenshotAs - Selenium method that captures the current browser screen
+
+        try {   //IO exception block to handle errors
+            Files.move(screenshot.toPath(), new File("resources/screenshots/appointment.png").toPath()); //moves ss to desired folder
         }catch (IOException exception){
-            exception.printStackTrace();
+            exception.printStackTrace();  //print full error details
         }
+        //try{} - put code inside that might fail
+        //catch{} - to catch the error (has the error msg)
     }
 }
