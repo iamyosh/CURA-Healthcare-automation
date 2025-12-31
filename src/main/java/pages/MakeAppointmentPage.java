@@ -51,7 +51,6 @@ public class MakeAppointmentPage {
     public void clickAppointmentButton(){
         driver.findElement(appointmentButton).click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
     }
 
     public void backToHome(){
