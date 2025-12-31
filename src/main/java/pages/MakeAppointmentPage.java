@@ -16,6 +16,7 @@ public class MakeAppointmentPage {
     private By dateInput = By.id("txt_visit_date");
     private By comment = By.id("txt_comment");
     private By appointmentButton = By.id("btn-book-appointment");
+    private By backToHomeButton = By.className("btn btn-default");
 
     public MakeAppointmentPage(WebDriver driver){
         this.driver = driver;
@@ -49,5 +50,13 @@ public class MakeAppointmentPage {
 
     public void clickAppointmentButton(){
         driver.findElement(appointmentButton).click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
     }
+
+    public void backToHome(){
+        driver.findElement(backToHomeButton).click();
+    }
+
+
 }

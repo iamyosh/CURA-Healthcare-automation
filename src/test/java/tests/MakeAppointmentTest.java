@@ -52,4 +52,5 @@ public class MakeAppointmentTest extends BaseTest{
         //try{} - put code inside that might fail
         //catch{} - to catch the error (has the error msg)
     }
+
 }
