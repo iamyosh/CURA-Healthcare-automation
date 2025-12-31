@@ -54,11 +54,10 @@ public class MakeAppointmentPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public BackHomePage backHomePage(){
-        wait.until(ExpectedConditions.elementToBeClickable(backToHomeButtonLink)).click();
+    public BackHomePage backHomeLink(){
+        driver.findElement(backToHomeButtonLink).click();
         return new BackHomePage(driver);
     }
-
 
 
 }

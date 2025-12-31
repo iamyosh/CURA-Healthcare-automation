@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.AppointmentLoginPage;
+import pages.BackHomePage;
 import pages.MakeAppointmentPage;
 
 import java.io.File;
@@ -34,6 +35,8 @@ public class MakeAppointmentTest extends BaseTest{
 
         makeAppointmentPage.addComment("No comment");
         makeAppointmentPage.clickAppointmentButton();
+
+        BackHomePage backHomePage = makeAppointmentPage.backHomeLink();
     }
 
     @AfterMethod
