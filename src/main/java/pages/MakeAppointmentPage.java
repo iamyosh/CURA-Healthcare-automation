@@ -21,11 +21,11 @@ public class MakeAppointmentPage {
 
     public MakeAppointmentPage(WebDriver driver){
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));   //explicit wait
     }
 
     //Dropdown list - to select the facility
     public void selectFromDropdown(String option){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));   //explicit wait
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(dropdown));
 
         Select select = new Select(element);    //use 'Select' for a dropdown
@@ -34,8 +34,6 @@ public class MakeAppointmentPage {
 
     //Calendar - to select appointment date
     public void selectDate(String day){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
         //open the calendar
         wait.until(ExpectedConditions.elementToBeClickable(dateInput)).click();
 
@@ -51,7 +49,6 @@ public class MakeAppointmentPage {
 
     public void clickAppointmentButton(){
         driver.findElement(appointmentButton).click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public BackHomePage backHomeLink(){
