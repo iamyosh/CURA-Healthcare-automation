@@ -52,7 +52,8 @@ public class MakeAppointmentPage {
     }
 
     public BackHomePage backHomeLink(){
-        driver.findElement(backToHomeButtonLink).click();
+        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(backToHomeButtonLink));  //explicit wait
+        button.click();
         return new BackHomePage(driver);
     }
 
